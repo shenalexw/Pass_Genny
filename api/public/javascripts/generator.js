@@ -13,7 +13,6 @@ function generate(length, capital, number, symbol) {
         var randomNumber = Math.floor(Math.random() * charPool.length);
         password += charPool.substring(randomNumber, randomNumber + 1);
     }
-    console.log(password)
     return password;
 }
 
