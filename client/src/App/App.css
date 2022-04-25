@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+}
+
+button {
+    border: none;
+    transition-duration: 0.4s;
+    background-color: #4CAF50;
+    /* Green */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+.instructions {
+    text-align: left;
+}
+
+.password {
+    font-size: 20px;
+    color: green;
+}
+
+.passwordBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    border-style: solid;
+    border-radius: 30px;
+}
+
+.generatePassword {
+    text-align: center;
+}

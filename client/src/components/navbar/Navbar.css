@@ -1,0 +1,108 @@
+nav {
+    text-decoration: none;
+    min-height: 12vh;
+    width: 100%;
+    background-color: #7c8991;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navTitle {
+    margin-left: 20px;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a:hover {
+    color: lightgrey;
+}
+
+.nav-links a {
+    margin-right: 20px;
+    padding: 20px 20px;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.burger {
+    display: none;
+    margin-right: 20px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 1000px) {
+    .logo p {
+        font-size: 60px;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        position: absolute;
+        height: auto;
+        top: 12vh;
+        background-color: #7c8991;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        z-index: 1;
+        animation: fadein 0.5s;
+    }
+
+    .nav-links a {
+        margin-right: 0px;
+        font-size: 26px;
+    }
+
+    .order_button a {
+        background-color: #7c8991;
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
