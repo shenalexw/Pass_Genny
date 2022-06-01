@@ -1,39 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Plus+Jakarta+Sans:wght@400&display=swap');
+
+* {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html,
 body {
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
+
 
 button {
     border: none;
+    background-color: #4caf4fde;
     transition-duration: 0.4s;
-    background-color: #4CAF50;
-    /* Green */
     color: white;
-    padding: 15px 32px;
+    padding: 16px 32px;
     text-align: center;
+    vertical-align: middle;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    cursor: pointer;
 }
 
-
-.instructions {
-    text-align: left;
+button:hover {
+    background-color: #4caf4f;
+    /* Green */
 }
 
-.password {
-    font-size: 20px;
-    color: green;
-}
-
-.passwordBox {
+.centerFlexBoxCol {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 4rem;
-    border-style: solid;
-    border-radius: 30px;
 }
 
-.generatePassword {
-    text-align: center;
+.centerFlexBoxRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }

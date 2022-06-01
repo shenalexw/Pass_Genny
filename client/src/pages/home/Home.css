@@ -1,0 +1,138 @@
+.home {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.home button {
+    margin: 5px;
+}
+
+.configurations {
+    width: 220px;
+}
+
+.instructions {
+    text-align: left;
+}
+
+.password {
+    font-size: 20px;
+    color: green;
+}
+
+.passwordBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 4rem;
+    border-style: solid;
+    border-radius: 30px;
+}
+
+.passwordBoxLeft {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.passwordBoxRight {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.generatePassword {
+    text-align: center;
+}
+
+.closeButton {
+    position: absolute;
+}
+
+.dropDown {
+    text-align: left;
+}
+
+.dropDownOutDiv {
+    width: 60%;
+}
+
+.clearBox:hover {
+    cursor: pointer;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

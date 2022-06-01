@@ -8,13 +8,17 @@ nav {
     align-items: center;
 }
 
+.nav-links button {
+    margin-right: 20px;
+}
+
 .navTitle {
-    margin-left: 20px;
+    margin-left: 40px;
     display: block;
     color: white;
     text-align: center;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .nav-links {
@@ -30,8 +34,7 @@ nav {
 
 .nav-links a {
     margin-right: 20px;
-    padding: 20px 20px;
-    display: block;
+    padding: 15px 32px;
     color: white;
     text-align: center;
     text-decoration: none;

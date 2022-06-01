@@ -1,0 +1,35 @@
+.login {
+    margin-top: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    width: 400px;
+    height: 400px;
+    border-radius: 30px;
+}
+
+.loginSubmitBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginSubmitBox button {
+    margin: 20px;
+}
+
+.loginBox input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
