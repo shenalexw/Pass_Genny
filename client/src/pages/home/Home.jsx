@@ -9,7 +9,6 @@ import SaveForm from '../../components/saveForm/SaveForm';
 
 
 export default function Home({ token, identification }) {
-    const [generateButtonText, setGenerateButtonText] = useState("Generate Password")
     const [hidden, setHidden] = useState(false)
     const [toggleDisplayPassword, setDisplayPassword] = useState(true)
     const [password, setPassword] = useState({
@@ -20,24 +19,7 @@ export default function Home({ token, identification }) {
     const [number, setNumber] = useState(true)
     const [capital, setCapital] = useState(true)
     const [symbol, setSymbol] = useState(true)
-    const [value, setValue] = React.useState('english');
 
-    // Handles Language Change
-    const handleLangChange = (event) => {
-        setValue(event.target.value);
-        let credentials = { "language": event.target.value, "text": generateButtonText };
-        getText(credentials);
-    }
-
-    async function getText(credentials) {
-        axios.post("http://localhost:5004/translate", credentials)
-            .then(function (response) {
-                setGenerateButtonText(response.data["text"])
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-    }
 
     // snackbar
     const options = {
@@ -141,20 +123,7 @@ export default function Home({ token, identification }) {
             <div className="homeContent">
 
                 <div className="instructions">
-                    <div className="dropDown">
-                        <label>
-                            Language:  <select value={value} onChange={handleLangChange}>
-                                <option value="english">English</option>
-                                <option value="spanish">Spanish</option>
-                                <option value="french">French</option>
-                                <option value="korean">Korean</option>
-                                <option value="japanese">Japanese</option>
-                                <option value="chinese (traditional)">Chinese</option>
-                            </select>
-                        </label>
-                        <br />
-                        <br />
-                    </div>
+
 
                     The password generator will generate a random password based off the configurations you desire!
                     <ul>
@@ -186,7 +155,7 @@ export default function Home({ token, identification }) {
                     <br /><br />
                 </form>
                 <div className="generatePassword">
-                    <button onClick={getPassword}>{generateButtonText}</button>
+                    <button onClick={getPassword}>Generate Password</button>
                     <button onClick={handleTogglePassword}>Toggle Previous Password</button>
                     <button onClick={handleCopy}>Copy</button>
                     <br />

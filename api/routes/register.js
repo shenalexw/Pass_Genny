@@ -16,7 +16,7 @@ function userObj(userName, password) {
     }
     return userModel
 }
-/* GET All users */
+/* Register User */
 router.post('/', function (req, res) {
     // Mongo Object ID
     var user_name = req.body.username;

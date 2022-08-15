@@ -8,17 +8,8 @@ var app = express();
 
 require('dotenv').config();
 
-// Get the token
-const axios = require('axios');
-axios
-  .get('http://127.0.0.1:5000/api/uuid/')
-  .then(res => {
-    process.env.TOKEN = res.data['uuid'];
-    console.log(`currentToken: ${process.env.TOKEN}`);
-  })
-  .catch(error => {
-    console.error(error);
-  });
+process.env.TOKEN = "TESTING-TOKEN-DO-NOT-USE-THIS";
+console.log(`currentToken: ${process.env.TOKEN}`);
 
 //Mongo Connection credentials
 const mongoDb = require('./mongoDb');

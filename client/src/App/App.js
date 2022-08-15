@@ -11,11 +11,11 @@ import SnackbarProvider from 'react-simple-snackbar'
 import './App.css';
 import View from "../pages/view/View";
 
-// import { v4 as uuidv4 } from 'uuid';
-
 function App() {
   const { token, setToken } = useToken();
   const { identification, setIdentification } = useIdentification();
+
+  // If a user is not logged in
   if (!token && !identification) {
     return <>
       <SnackbarProvider>
@@ -33,6 +33,7 @@ function App() {
     </>
   }
 
+  // If a user is logged in
   return (
     <>
       <SnackbarProvider>
