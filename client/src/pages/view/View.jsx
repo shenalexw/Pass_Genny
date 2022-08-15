@@ -35,7 +35,7 @@ export default function View({ token, identification }) {
 
     async function getPasswords(identification, token) {
         try {
-            const response = await axios.get("http://localhost:4000/pass/users/" + identification + "?access_token=" + token);
+            const response = await axios.get("https://pass-genny.herokuapp.com/pass/users/" + identification + "?access_token=" + token);
             if (response.data.length === 0) { return errorSnackbar("No Data Found", 2000) };
             setData(response.data);
             openSnackbar("Table Loaded", 2000);
@@ -47,7 +47,7 @@ export default function View({ token, identification }) {
 
     const refreshTable = async () => {
         try {
-            const response = await axios.get("http://localhost:4000/pass/users/" + identification + "?access_token=" + token);
+            const response = await axios.get("https://pass-genny.herokuapp.com/pass/users/" + identification + "?access_token=" + token);
             setData(response.data);
         } catch (error) {
             errorSnackbar("Unable to get Passwords", 2000);
@@ -55,7 +55,7 @@ export default function View({ token, identification }) {
         }
     }
     async function deletePassword(key, identification, token) {
-        axios.delete("http://localhost:4000/pass/users/" + identification + "?access_token=" + token + "&key=" + key)
+        axios.delete("https://pass-genny.herokuapp.com/pass/users/" + identification + "?access_token=" + token + "&key=" + key)
             .then(function (response) {
                 if (response) {
                     refreshTable();
@@ -70,7 +70,7 @@ export default function View({ token, identification }) {
     }
 
     async function updatePassword(identification, token, credentials) {
-        axios.put("http://localhost:4000/pass/users/" + identification + "?access_token=" + token, credentials)
+        axios.put("https://pass-genny.herokuapp.com/pass/users/" + identification + "?access_token=" + token, credentials)
             .then(function (response) {
                 if (response.data) {
                     openSnackbar("Key updated", 2000);

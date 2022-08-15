@@ -51,7 +51,7 @@ export default function Home({ token, identification }) {
     async function getPassword() {
         try {
             setDisplayPassword(true);
-            const response = await axios.get("http://localhost:4000/pass?length=" + length + "&number=" + number + "&capital=" + capital + "&symbol=" + symbol);
+            const response = await axios.get("https://pass-genny.herokuapp.com/pass?length=" + length + "&number=" + number + "&capital=" + capital + "&symbol=" + symbol);
             const updatedValue = {
                 recievedPassword: response.data,
                 previousPassword: password.recievedPassword

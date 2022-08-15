@@ -35,7 +35,7 @@ export default function SaveForm({ token, identification, password }) {
     const [errorSnackbar] = useSnackbar(errorOptions)
 
     async function savePassword(identification, token, credentials) {
-        axios.post("http://localhost:4000/pass/users/" + identification + "?access_token=" + token, credentials)
+        axios.post("https://pass-genny.herokuapp.com/pass/users/" + identification + "?access_token=" + token, credentials)
             .then(function (response) {
                 if (response.data) {
                     openSnackbar("Password Saved", 2000);
