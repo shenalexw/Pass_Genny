@@ -40,7 +40,7 @@ export default function Login({ setToken, setIdentification }) {
     let navigate = useNavigate();
 
     async function loginUser(credentials) {
-        axios.post("https://pass-genny.herokuapp.com/login", credentials)
+        axios.post("https://passgennyproject.onrender.com/login", credentials)
             .then(function (response) {
                 let token = response.data["token"];
                 let identification = response.data["identification"];

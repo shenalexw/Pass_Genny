@@ -1,7 +1,7 @@
 # Pass Genny
 
 ## How to use
-https://pass-genny.herokuapp.com/
+https://passgennyproject.onrender.com
 
 ## Description
 MERN stack app that allows users to generate a password and store up to 5 passwords
