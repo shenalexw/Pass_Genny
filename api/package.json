@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "npx nodemon ./bin/www",
-    "build": "webpack --config webpack.config.js"
+    "build": "npm run build"
   },
   "dependencies": {
     "axios": "^0.27.2",
